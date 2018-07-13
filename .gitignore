@@ -1,6 +1,9 @@
 credentials*
 stateOfVeganism*
 
+# zips
+*.zip
+
 # Logs
 logs
 *.log
