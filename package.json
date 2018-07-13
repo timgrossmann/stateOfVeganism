@@ -1,0 +1,33 @@
+{
+  "name": "stateOfVeganism",
+  "version": "0.1.0",
+  "description": "🌱 Get insights into the current state of Veganism around the world based on global news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timgrossmann/stateOfVeganism.git"
+  },
+  "keywords": [],
+  "author": "Tim Grossmann <contact.timgrossmann@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timgrossmann/stateOfVeganism/issues"
+  },
+  "homepage": "https://github.com/timgrossmann/stateOfVeganism#readme",
+  "dependencies": {
+    "@google-cloud/bigtable": "^0.13.1",
+    "@google-cloud/datastore": "^1.4.0",
+    "@google-cloud/language": "^1.2.0",
+    "aws-sdk": "^2.252.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16",
+    "newsapi": "^2.2.2",
+    "node-schedule": "^1.3.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "textract": "^2.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "gcf_news",
+  "version": "1.0.0",
+  "description": "Calls the newsAPI",
+  "main": "gcfGetNews.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.22.1",
+    "newsapi": "^2.2.2"
+  }
+}

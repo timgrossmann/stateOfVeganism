@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+      <title>🌱 The State of Veganism</title>
+      <meta name="description" content="The State of Veganism">
+      <meta name="author" content="Tim Grossmann">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="text-center">
+      <a href="https://github.com/timgrossmann/stateofveganism"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
+      <div class="container">
+        <div class="inner-container">
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading">The State of<span class="in-line"><span id="veganism"></span>eganism</span></h1>
+            <p class="lead">Uncovering the current mood of media publications in regards to veganism.</p>
+
+            <!-- Datepicker -->
+            <div class="datepicker-container">
+              <div class="datepicker">
+                <div class="space-before"></div>
+                <div class="timeframe">
+                  <button class="btn dateButton selectedDate" id="6h" onclick="loadData('6h')">6 Hours</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="1d" onclick="loadData('1d')">1 Day</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="3d" onclick="loadData('3d')">3 Days</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="1w" onclick="loadData('1w')">1 Week</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="1m" onclick="loadData('1m')">1 Month</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="6m" onclick="loadData('6m')">6 Months</button>
+                </div>
+                <div class="timeframe">
+                  <button class="btn dateButton" id="1y" onclick="loadData('1y')">1 Year</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Barchart -->
+            <div class="barchart">
+              <div class="bar-container">
+                <div class="bar positive-bar" id="positiveBar" onclick="showSentimentTopArticles('positive')">
+                  <p class="percentage" id="posPercentage">Test</p>
+                </div>
+
+                <div class="bar neutral-bar" id="neutralBar" onclick="showSentimentTopArticles('neutral')">
+                  <p class="percentage" id="neutPercentage" >Test</p>
+                </div>
+
+                <div class="bar negative-bar" id="negativeBar" onclick="showSentimentTopArticles('negative')">
+                  <p class="percentage" id="negPercentage">Test</p>
+                </div>
+              </div>
+
+              <!-- Article lists -->
+              <div class="examples">
+                <table class="table">
+                  <tbody id="example-table"></tbody>
+                </table>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+      <footer class="footer">
+        <p></p>
+        <p>Built by <a href="https://github.com/timgrossmann">Tim Grossmann</a> - powered by <a href="https://newsapi.org">@NewsAPI</a></p>
+      </footer>
+      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.270.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+</html>

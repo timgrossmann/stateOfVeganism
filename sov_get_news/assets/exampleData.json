@@ -1,0 +1,55 @@
+{
+  "articleID": {
+    "S": "163e68fd"
+  },
+  "author": {
+    "S": "newsfeeds@nzherald.co.nz"
+  },
+  "context": {
+    "S": "New Whanganui resident promotes veganism online and through events\n          World Meat Free Week is just another week for Lyndsay Veganforlife - she hasn't eaten meat for 18 years.The cause is so dear to her that she formally changed her name. But becoming vegan happened for health reasons while she was...\n          New Whanganui resident promotes veganism online and through events - NZ Herald\nNew Whanganui resident promotes veganism online and through events\nThere are lots of delicious vegan foods, Lyndsay Veganforlife says.\nThe cause is so dear to her that she formally changed her name. But becoming vegan happened for health reasons while she was living in Melbourne.\nuntilTS then she had never heard the word vegan or eaten a lentil.\nIt was hard for a vegan to find places to eat out in Melbourne 18 years ago. Now there are lots, Veganforlife said.\nShe moved to Wellington 15 years ago and threw herself into the cause there, helping at vegan sausage sizzles and protests.\nSince moving to Whanganui in November she's been active on our own vegan/vegetarian Facebook pages, and has organised events like vegan cheese tastings.\nInstead there's vegan food at several eateries and even someone who wants to start a \"ve-gang\".\nShe makes her own bread and eats roasted and steamed vegetables, fruit, vegan yoghurt and desserts with chia seeds. Favourite dishes are a one-pot pasta with a creamy garlic sauce, or a pizza with vegan cheese, olives and artichoke hearts.\nSome people are vegan for purely health or environmental reasons, Veganforlife said."
+  },
+  "description": {
+    "S": "World Meat Free Week is just another week for Lyndsay Veganforlife - she hasn't eaten meat for 18 years.The cause is so dear to her that she formally changed her name. But becoming vegan happened for health reasons while she was..."
+  },
+  "publishedAt": {
+    "S": "2018-06-14T05:00:57Z"
+  },
+  "sentiment": {
+    "S": "NEUTRAL"
+  },
+  "sentimentScore": {
+    "M": {
+      "Mixed": {
+        "N": "0.007755399215966463"
+      },
+      "Negative": {
+        "N": "0.012597677297890186"
+      },
+      "Neutral": {
+        "N": "0.870256245136261"
+      },
+      "Positive": {
+        "N": "0.10939067602157593"
+      }
+    }
+  },
+  "source": {
+    "M": {
+      "id": {
+        "NULL": true
+      },
+      "name": {
+        "S": "Nzherald.co.nz"
+      }
+    }
+  },
+  "title": {
+    "S": "New Whanganui resident promotes veganism online and through events"
+  },
+  "url": {
+    "S": "https://www.nzherald.co.nz/wanganui-chronicle/news/article.cfm?c_id=1503426&objectid=12069230"
+  },
+  "urlToImage": {
+    "S": "https://www.nzherald.co.nz/resizer/w3uePJ5OhOhGk8AIXVQU4fhMyLo=/1200x0/smart/filters:quality(70)/arc-anglerfish-syd-prod-nzme.s3.amazonaws.com/public/JT72TARXA5FTNLMRKW3OK5K7OE.jpg"
+  }
+}

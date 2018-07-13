@@ -1,0 +1,162 @@
+body {
+    background-color: #524948;
+    color: #fff8f0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 7em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.lead {
+    font-size: 1.5em;
+}
+
+.in-line {
+    display: inline-block;
+    transform: translate(-50px, 0);
+}
+
+.footer a {
+    color: #90d444;
+}
+
+.datepicker-container {
+    display: flex;
+    margin-top: 100px;
+}
+
+.datepicker {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dateButton {
+    background-color: transparent;
+    border: 1px solid #fff8f0;
+    color: #fff8f0;
+    margin-right: 5px;
+}
+
+.dateButton:hover {
+    background-color: #fff8f0;
+    color: #524948;
+}
+
+.selectedDate {
+    background-color: #fff8f0;
+    color: #524948;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+}
+
+.inner-container {
+    width: 80vw;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 15px;
+}
+
+.bar {
+    height: 100px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    -webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    color: transparent;
+}
+
+.bar:hover {
+    -webkit-transform: skew(-15deg) scale(1.01, 1.1);
+    -moz-transform: skew(-15deg) scale(1.01, 1.1);
+    -o-transform: skew(-15deg) scale(1.01, 1.1);
+    color: #fff8f0;
+    outline: thick solid #524948;
+    z-index: 100;
+}
+
+.selected-bar {
+    -webkit-transform: skew(-15deg) scale(1.01, 1.1);
+    -moz-transform: skew(-15deg) scale(1.01, 1.1);
+    -o-transform: skew(-15deg) scale(1.01, 1.1);
+    color: #fff8f0;
+    outline: thick solid #524948;
+    z-index: 100;
+}
+
+.mood-container {
+    align-self: center;
+}
+
+.percentage {
+    padding-top: 10px;
+    font-size: 1.2em;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    -o-transform: skew(15deg);
+}
+
+.positive-bar {
+    background-color: #b6ed8f;
+}
+
+.neutral-bar {
+    background-color: #b8c4bb;
+}
+
+.negative-bar {
+    background-color: #ed636e;
+}
+
+#veganism {
+    height: 150px;
+    content: url(assets/vegetarian-mark.svg);
+    padding: 0;
+    margin: 0;
+    transform: translate(50px, 0);
+}
+
+.examples {
+    margin-top: 50px;
+    height: 25%;
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.75em;
+}
+
+.space-before {
+    margin-right: 15px;
+}
+
+td {
+    text-align: left;
+}
+
