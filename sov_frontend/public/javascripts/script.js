@@ -3,14 +3,10 @@ window.addEventListener('load', function() {
   loadData('6h')
 })
 
-// TODO change to env data
-const dynamodb = new AWS.DynamoDB({
-  region: 'us-east-1',
-  accessKeyId: 'AKIAJ3BZBQHWBFIJ6XFA',
-  secretAccessKey: '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',
-});
+const dynamoTableName = process.env.TABLE_NAME
+const dynamodb = new AWS.DynamoDB()
 
-let timeframeData = []
+let timeFrameData = []
 let posArticles = []
 let neutArticles = []
 let negArticles = []
@@ -56,7 +52,7 @@ function updateExampleTable(articleList) {
     const publishedAt = article.publishedAt.S
 
     return `<tr>
-                <td><a href="${url}" style="color:${getSentimentColor(getSelectedSentiment())}">${title}</a></td>
+                <td><a href='${url}' style='color:${getSentimentColor(getSelectedSentiment())}'>${title}</a></td>
                 <td>${source}</td>  
                 <td>${moment(publishedAt).format('MM-DD-YYYY HH:mm')}</td>  
               </tr>
@@ -67,16 +63,16 @@ function updateExampleTable(articleList) {
 function queryDynamoDB(fromTS, untilTS) {
   return new Promise((res, rej) => {
     const params = {
-      TableName: "sov-article-data", // TODO change to env var
+      TableName: dynamoTableName,
       ExpressionAttributeValues: {
-        ":t1": {
+        ':t1': {
           S: fromTS.format('YYYY-MM-DDTHH:mm:ss')
         },
-        ":t2": {
+        ':t2': {
           S: untilTS.format('YYYY-MM-DDTHH:mm:ss')
         }
       },
-      FilterExpression: "publishedAt BETWEEN :t1 AND :t2"
+      FilterExpression: 'publishedAt BETWEEN :t1 AND :t2'
     }
 
     dynamodb.scan(params, (err, data) => {
@@ -86,7 +82,7 @@ function queryDynamoDB(fromTS, untilTS) {
       }
 
       res(data)
-    });
+    })
   })
 }
 
@@ -117,13 +113,13 @@ function loadData (timespan) {
 }
 
 function updateArticles(articles) {
-  timeframeData = articles
+  timeFrameData = articles
 
   const tmpPos = []
   const tmpNeut = []
   const tmpNeg = []
 
-  timeframeData.forEach(article => {
+  timeFrameData.forEach(article => {
     const sentiment = article.sentiment.S
 
     switch (sentiment) {
@@ -206,9 +202,9 @@ function updateBars() {
   const neutBar = document.getElementById('neutralBar')
   const negBar = document.getElementById('negativeBar')
 
-  const posBarWidth = Math.round(100 / timeframeData.length * posArticles.length)
-  const neutBarWidth = Math.round(100 / timeframeData.length * neutArticles.length)
-  const negBarWidth = Math.round(100 / timeframeData.length * negArticles.length)
+  const posBarWidth = Math.round(100 / timeFrameData.length * posArticles.length)
+  const neutBarWidth = Math.round(100 / timeFrameData.length * neutArticles.length)
+  const negBarWidth = Math.round(100 / timeFrameData.length * negArticles.length)
 
   posBar.style.width = `${posBarWidth}%`
   neutBar.style.width = `${neutBarWidth}%`
