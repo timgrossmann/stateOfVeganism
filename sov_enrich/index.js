@@ -53,9 +53,12 @@ function enrichRecordWithContext (record) {
         .join('\n')
 
       // only use title and description if they contain 'vegan'
+      const title = record.title
+      const desc = record.description
+
       record.context = `
-          ${record.title.indexOf('vegan') > -1 ? record.title : ''}
-          ${record.description.indexOf('vegan') > -1 ? record.description : ''}
+          ${title && title.indexOf('vegan') > -1 ? title : ''}
+          ${desc && desc.indexOf('vegan') > -1 ? desc : ''}
           ${texts}
           `.trim()
 
@@ -99,6 +102,14 @@ function writeToDynamoDB (record) {
       .map(v => v.charCodeAt(0))
       .reduce((a, v) => a+((a<<7)+(a<<3))^v)
       .toString(16)
+
+    // Replace all empty String values with null
+    // necessary because empty Strings are not allowed in DynamoDB
+    for(const key in record) {
+      if (record.hasOwnProperty(key) && record[key] === "") {
+        record[key] = null
+      }
+    }
 
     // Writing the record data to dynamoDB
     const params = {

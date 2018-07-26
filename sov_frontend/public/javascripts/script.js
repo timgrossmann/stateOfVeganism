@@ -3,8 +3,8 @@ window.addEventListener('load', function() {
   loadData('6h')
 })
 
-const dynamoTableName = process.env.TABLE_NAME
-const dynamodb = new AWS.DynamoDB()
+const dynamoTableName =  'sov-article-data'
+const dynamodb = new AWS.DynamoDB({ region: 'us-east-1' })
 
 let timeFrameData = []
 let posArticles = []
