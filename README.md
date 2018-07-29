@@ -1,6 +1,6 @@
 <img src="assets/state_of_veganism.png"/>
 
-> News and Media manipulate our own opinion on topics we might not even have a thought about... A reporter writing about how bad something, in a lot of cases, is not questioned at all because they have some kind of reputation.   
+> News and Media manipulate our opinion on topics we might not even have a thought about... A reporter writing about how bad something, in a lot of cases, is not questioned at all because they have some kind of reputation.   
 
 ![frontend](assets/frontend_neutral.png)
 
