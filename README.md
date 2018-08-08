@@ -13,7 +13,9 @@ Take a look at it here:
 
 ### How i built it
 If you're interested in seeing the process of buidling this project, I wrote an article about it on Medium.   
-[Building a fully scalable architecture with AWS](https://medium.freecodecamp.org/building-a-fully-scalable-architecture-with-aws-5c4e8612565e)
+[Building a fully scalable architecture with AWS on Medium](https://medium.freecodecamp.org/how-to-build-a-fully-scalable-architecture-with-aws-5c4e8612565e)
+
+[Building a fully scalable architecture with AWS on our University Blog](https://blog.mi.hdm-stuttgart.de/index.php/2018/07/31/building-a-fully-scalable-architecture-with-aws/)
 
 Here's a preview on the final architecture that is described in detail in the mentioned article.
 ![architecture](assets/sov_architecture_small.png)
